@@ -24,6 +24,4 @@ jobs:
       - name: powershell
         run: |
           Get-location
-          pwd 
-          shell: bash
       
