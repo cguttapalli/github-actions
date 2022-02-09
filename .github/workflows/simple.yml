@@ -14,7 +14,9 @@ jobs:
           npm -v
           node -v
       - name: python command 
-        run: python
+        run: |
+          import platform 
+          print(platform.processor())
         shell: python
   run-windows-command:
     runs-on: windows-latest
@@ -22,4 +24,6 @@ jobs:
       - name: powershell
         run: |
           Get-location
-      
+      - name: bash
+        run: pwd
+        shell: bash
